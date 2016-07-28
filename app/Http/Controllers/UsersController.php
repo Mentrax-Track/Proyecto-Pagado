@@ -7,8 +7,10 @@ use Infraestructura\User;
 use Infraestructura\Http\Requests;
 use Infraestructura\Http\Controllers\Controller;
 
+
 class UsersController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +30,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('automotores.usuarios.create');
     }
 
     /**
@@ -39,7 +41,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd(User::create($request->all()));
     }
 
     /**

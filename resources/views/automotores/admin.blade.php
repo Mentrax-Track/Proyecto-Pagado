@@ -41,19 +41,17 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <br><p class="centered text-center"><img class="img-circle" width="85" src="{!! URL::to('/img/infrax.jpg') !!}"><br><a>U.A.T.F.</a></p>
-                        @if(Auth::user()->id == 1)
                             <li>
                                 <a href="#"><i class="fa fa-users fa-fw"></i> Usuario<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="{!! URL::to('/users') !!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                        <a href="{!! URL::to('/users/create') !!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                     </li>
                                     <li>
-                                        <a href="{!! URL::to('/usuario') !!}"><i class='fa fa-list-ol fa-fw'></i> Usuarios</a>
+                                        <a href="{!! URL::to('/users') !!}"><i class='fa fa-list-ol fa-fw'></i> Usuarios</a>
                                     </li>
                                 </ul>
                             </li>
-                        @endif
                         <li>
                             <a href="#"><i class='glyphicon glyphicon-calendar'></i> Reservas<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

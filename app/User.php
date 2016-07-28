@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['nombres','apellidos','cedula','celular','facultad','carrera','materia','sigla' ,'tipo','rol','email', 'password'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +36,13 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function getFullnameAttribute()
+    {
+        return $this->nombres.' '.$this->apellidos;
+    }
+    public function getFullinstitucionAttribute()
+    {
+        return $this->facultad.' '.$this->carrera.' '.$this->materia.' '.$this->sigla;
+    }
 }

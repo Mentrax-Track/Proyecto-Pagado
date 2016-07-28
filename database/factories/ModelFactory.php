@@ -24,8 +24,8 @@ $factory->define(Infraestructura\User::class, function (Faker\Generator $faker) 
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
-        'rol' => $faker->randomElement(['encargado-seccion','chofer','mecanico','usuario']),
-        'tipo' => $faker->randomElement(['super-usuario','usuario']),
+        'rol' => $faker->randomElement(['encargado','chofer','mecanico','docente']),
+        'tipo' => $faker->randomElement(['admin','supervisor','usuario']),
         'active'=> $faker->boolean
     ];
 });

@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('carrera');
             $table->string('materia');
             $table->string('sigla');
-            $table->enum('tipo',['administrador','super-usuario','usuario']);
-            $table->enum('rol',['admin','encargado-seccion','chofer','mecanico','usuario']);
+            $table->enum('tipo',['admin','supervisor','usuario']);
+            $table->enum('rol',['encargado','chofer','mecanico','docente']);
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->boolean('active')->default(true);
