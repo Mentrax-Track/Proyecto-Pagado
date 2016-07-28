@@ -41,10 +41,7 @@ Route::get('Salir', [
     'as' => 'logout'
     ]);
 
-Route::get('Inicio-Automotores', [
-    'uses' => 'AutomotoresController@index',
-    'as'   => 'auto'
-    ]);
+
 
 
 // Registration routes...
@@ -60,3 +57,14 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
+//Este middleware es para q solo los usuarios 
+//que iniciaron session tengan acceso a dichas rutas
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('Inicio-Automotores', [
+    'uses' => 'AutomotoresController@index',
+    'as'   => 'auto'
+    ]);
+
+    Route::resource('users','UsersController');
+});

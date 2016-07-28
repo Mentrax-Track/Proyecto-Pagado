@@ -11,7 +11,7 @@
     <title>Dpto. de Infraestructura</title>
 
     {!! Html::style('css/bootstrap.min.css') !!}
-    {!! Html::style('css/styles.css') !!}
+    {!! Html::style('css/style.css') !!}
 
     <link href="carousel.css" rel="stylesheet">
   </head>
@@ -50,6 +50,19 @@
         </div>
       </nav>
 
+      @section('content')
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="panel panel-default">
+                <div class="panel-heading">Sección de Automotores</div>
+                 <div class="panel-body">
+                    <p>Holas estas ingresando a la sección de automotores donde podrás visualizar los detalles de los viajes de práctica.</p>
+                 </div>
+              </div>
+          </div>       
+      </div>
+      @stop
+
       @yield('content')
 
       <!-- FOOTER -->
@@ -65,7 +78,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     {!! Html::script('js/jquery.min.js') !!}
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"></script>')</script>
     {!! Html::script('js/bootstrap.min.js') !!}
     {!! Html::script('js/holder.min.js') !!}
   </body>

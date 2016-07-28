@@ -11,7 +11,7 @@
     <title>Dpto. de Infraestructura</title>
 
     {!! Html::style('css/bootstrap.min.css') !!}
-    {!! Html::style('css/styles.css') !!}
+    {!! Html::style('css/style.css') !!}
 
     <link href="carousel.css" rel="stylesheet">
   </head>

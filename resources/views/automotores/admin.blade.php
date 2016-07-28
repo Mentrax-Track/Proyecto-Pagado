@@ -13,14 +13,14 @@
     {!!Html::style('css/font-awesome.min.css')!!}
 </head>
 
-<body>
+<body class="letra">
 
     <div id="wrapper">
 
         
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Automotores | @yield('subtitulo')</a>
+                <a class="navbar-brand" href="{{ route('auto') }}">Automotores | @yield('subtitulo')</a>
             </div>
            
 
@@ -46,7 +46,7 @@
                                 <a href="#"><i class="fa fa-users fa-fw"></i> Usuario<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="{!! URL::to('/usuario/create') !!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                        <a href="{!! URL::to('/users') !!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                     </li>
                                     <li>
                                         <a href="{!! URL::to('/usuario') !!}"><i class='fa fa-list-ol fa-fw'></i> Usuarios</a>
