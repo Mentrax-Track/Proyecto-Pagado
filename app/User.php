@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['nombres','apellidos','cedula','celular','facultad','carrera','materia','sigla' ,'tipo','rol','email', 'password'];
+    protected $fillable = ['nombres','apellidos','cedula','celular','facultad','carrera','materia','sigla' ,'tipo','email', 'password'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -44,5 +44,13 @@ class User extends Model implements AuthenticatableContract,
     public function getFullinstitucionAttribute()
     {
         return $this->facultad.' '.$this->carrera.' '.$this->materia.' '.$this->sigla;
+    }
+
+    public function setPasswordAttribute($valor)
+    {
+        //Si este valor no esta vacio bamos a cambiar la conontraseña
+        if(!empty($valor)){
+            $this->attributes['password'] = \Hash::make($valor);
+        }
     }
 }

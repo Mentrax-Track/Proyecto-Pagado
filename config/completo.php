@@ -2,12 +2,13 @@
 
 return array(
 
-    'tipos' => [
+    'completos' => [
         ''    => 'Seleccione un tipo de usuario',
         'administrador'     => 'administrador',
         'supervisor'        => 'supervisor',
         'chofer'            => 'chofer',
         'mecánico'          => 'mecánico',
+        'encargado'         => 'encargado',
     ]
 )
 ?> 

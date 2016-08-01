@@ -23,9 +23,8 @@ class UserTableSeeder extends Seeder
             'materia' => 'null',
             'sigla' => 'null',
             'email'=> 'jorge@gmail.com',
-            'tipo' => 'admin',
-            'rol' => 'encargado',
-            'password'=> bcrypt('admin'),
+            'tipo' => 'administrador',
+            'password'=> 'admin1',
             'active'=> true
 
             ]);

@@ -2,9 +2,9 @@
 
 @section('subtitulo','Usuarios')
 @section('content')
+@include('alertas.success')
 <br>
 <div class="panel panel-default">
-
     <div class="panel-heading text-center"><h4>Lista de Usuarios</h4></div>
     <div class="panel-body">
         <div class="table-responsive">
@@ -16,7 +16,6 @@
                     <th>Celular</th>
                     <th>Email</th>
                     <th>Tipo</th>
-                    <th>Rol</th>
                     <th>Institución</th>
                     <th>Activo</th>
                     <th>Operación</th>
@@ -30,12 +29,11 @@
                             <td>{{ $user->celular }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->tipo }}</td>
-                            <td>{{ $user->rol }}</td>
                             <td>{{ $user->full_institucion }}</td>
                             <td>{{ $user->active }}</td>
-                            <td class="btns">
-                                <a href="#">Editar</a>
-                                <a href="#">Eliminar</a>
+                            <td class="btns"><center>
+                                {!!link_to_route('users.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                                    </center>
                             </td>
                         </tr>
                     </tbody>

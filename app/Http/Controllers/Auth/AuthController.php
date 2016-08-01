@@ -103,7 +103,7 @@ class AuthController extends Controller
         return [
             'cedula' => $request->get('cedula'),
             'password'=>$request->get('password'),
-            'active'=> true
+            'active' => true
         ];
     }
 }
